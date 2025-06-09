@@ -24,13 +24,15 @@ class HomeMobileView extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45),
           child: NameAndCVSection(
-            nameStyle: Styles.textStyle35,
+            nameStyle: Styles.textStyle45,
             shortAboutStyle:
-                Styles.textStyle18.copyWith(color: Color(0xff767474)),
+                Styles.textStyle24.copyWith(color: Color(0xff767474)),
             width: double.infinity,
             height: 144,
             downloadCVWidth: 200,
-            downloadCVHeight: 54, downloadCVStyle: Styles.textStyle18, SizedBoxHeight: 16,
+            downloadCVHeight: 54,
+            downloadCVStyle: Styles.textStyle24,
+            SizedBoxHeight: 24,
           ),
         ),
 
@@ -40,8 +42,9 @@ class HomeMobileView extends StatelessWidget {
           child: AboutMe(
             titleStyle:
                 Styles.textStyle24.copyWith(fontWeight: FontWeight.bold),
-            contactStyle: Styles.textStyle14,
-            sizedBoxHeight: 12, paddingHorizontal: 16,
+            contactStyle: Styles.textStyle16,
+            sizedBoxHeight: 12,
+            paddingHorizontal: 16,
           ),
         ),
       ],

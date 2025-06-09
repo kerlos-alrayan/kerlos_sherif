@@ -12,6 +12,11 @@ abstract class Styles {
     fontWeight: FontWeight.bold, // Regular
     fontFamily: kPoppins,
   );
+  static const textStyle45 = TextStyle(
+    fontSize: 45,
+    fontWeight: FontWeight.bold, // Regular
+    fontFamily: kPoppins,
+  );
   static const textStyle40 = TextStyle(
     fontSize: 40,
     fontWeight: FontWeight.bold, // Regular

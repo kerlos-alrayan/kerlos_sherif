@@ -5,7 +5,7 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     final scrollProvider = Provider.of<ScrollProvider>(context);
 
-    return Expanded(  // <--- هنا
+    return Expanded(
       child: ScrollablePositionedList.builder(
         padding: EdgeInsets.zero,
         itemCount: BodyUtils.views.length,

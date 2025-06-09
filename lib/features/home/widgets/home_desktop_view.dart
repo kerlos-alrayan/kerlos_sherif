@@ -11,7 +11,9 @@ class HomeDesktopView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 45,),
+        SizedBox(
+          height: 45,
+        ),
         // My name And CV
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 45),
@@ -32,11 +34,12 @@ class HomeDesktopView extends StatelessWidget {
                     nameStyle: Styles.textStyle80,
                     shortAboutStyle:
                         Styles.textStyle30.copyWith(color: Color(0xff767474)),
-                    width: 621,
+                    width: MediaQuery.of(context).size.width *0.4,
                     height: 90,
                     downloadCVWidth: 233,
                     downloadCVHeight: 65,
-                    downloadCVStyle: Styles.textStyle30, SizedBoxHeight: 32,
+                    downloadCVStyle: Styles.textStyle30,
+                    SizedBoxHeight: 32,
                   ),
                 ],
               ),
@@ -51,7 +54,8 @@ class HomeDesktopView extends StatelessWidget {
             titleStyle: Styles.textStyle40,
             contactStyle: Styles.textStyle26,
             sizedBoxHeight: 35,
-            contactHeight: 150, paddingHorizontal: 45,
+            contactHeight: 150,
+            paddingHorizontal: 45,
           ),
         ),
       ],
