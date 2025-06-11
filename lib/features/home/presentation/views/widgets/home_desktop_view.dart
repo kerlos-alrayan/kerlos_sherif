@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kerlos_sherif/core/utils/styles.dart';
-import 'package:kerlos_sherif/features/home/widgets/about_me.dart';
-import 'package:kerlos_sherif/features/home/widgets/custom_image.dart';
-import 'package:kerlos_sherif/features/home/widgets/name_cv_section.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/about_me.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/custom_image.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/name_cv_section.dart';
 
 class HomeDesktopView extends StatelessWidget {
   const HomeDesktopView({super.key});
@@ -39,7 +39,7 @@ class HomeDesktopView extends StatelessWidget {
                     downloadCVWidth: 233,
                     downloadCVHeight: 65,
                     downloadCVStyle: Styles.textStyle30,
-                    SizedBoxHeight: 32,
+                    sizedBoxHeight: 32,
                   ),
                 ],
               ),

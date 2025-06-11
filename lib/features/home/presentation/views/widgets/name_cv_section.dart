@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kerlos_sherif/features/home/widgets/download_cv.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/download_cv.dart';
 
 class NameAndCVSection extends StatelessWidget {
   const NameAndCVSection(
@@ -10,7 +10,7 @@ class NameAndCVSection extends StatelessWidget {
       required this.height,
       required this.downloadCVWidth,
       required this.downloadCVHeight,
-      required this.downloadCVStyle, required this.SizedBoxHeight});
+      required this.downloadCVStyle, required this.sizedBoxHeight});
 
   final TextStyle nameStyle;
   final TextStyle shortAboutStyle;
@@ -18,7 +18,7 @@ class NameAndCVSection extends StatelessWidget {
 
   final double width;
   final double height;
-  final double SizedBoxHeight;
+  final double sizedBoxHeight;
 
   final double downloadCVWidth;
   final double downloadCVHeight;
@@ -42,7 +42,7 @@ class NameAndCVSection extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: SizedBoxHeight,
+          height: sizedBoxHeight,
         ),
         DownloadCV(
           width: downloadCVWidth,

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kerlos_sherif/core/utils/styles.dart';
-import 'package:kerlos_sherif/features/home/widgets/about_me.dart';
-import 'package:kerlos_sherif/features/home/widgets/custom_image.dart';
-import 'package:kerlos_sherif/features/home/widgets/name_cv_section.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/about_me.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/custom_image.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/name_cv_section.dart';
 
 class HomeMobileView extends StatelessWidget {
   const HomeMobileView({super.key});
@@ -32,7 +32,7 @@ class HomeMobileView extends StatelessWidget {
             downloadCVWidth: 200,
             downloadCVHeight: 54,
             downloadCVStyle: Styles.textStyle24,
-            SizedBoxHeight: 24,
+            sizedBoxHeight: 24,
           ),
         ),
 

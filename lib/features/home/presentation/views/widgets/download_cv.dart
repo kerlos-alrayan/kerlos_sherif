@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/utils/styles.dart';
 
 class DownloadCV extends StatelessWidget {
   const DownloadCV({

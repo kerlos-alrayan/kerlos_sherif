@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:kerlos_sherif/features/home/home_desktop.dart';
-import 'package:kerlos_sherif/features/home/home_mobile.dart';
-import 'package:kerlos_sherif/features/home/home_teblet.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/home_desktop.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/home_mobile.dart';
 
-import '../../core/res/responsive.dart';
+import '../../../../core/res/responsive.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -12,7 +11,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Responsive(
       mobile: HomeMobile(),
-      tablet: HomeTablet(),
+      tablet: HomeMobile(),
       desktop: HomeDesktop(),
     );
   }

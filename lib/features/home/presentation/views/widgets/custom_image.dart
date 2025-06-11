@@ -14,7 +14,7 @@ class CustomImage extends StatelessWidget {
       child: CircleAvatar(
         radius: 50,
         backgroundColor: Colors.transparent,
-        child: Image.asset('assets/images/home/my_image.jpg'),
+        child: Image.network('https://res.cloudinary.com/dgab5vk9t/image/upload/v1749483021/1743093794635_kbzk5v.jpg'),
       ),
     );
   }

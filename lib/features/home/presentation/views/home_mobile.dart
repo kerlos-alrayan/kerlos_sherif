@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kerlos_sherif/features/home/widgets/home_mobile_view.dart';
+import 'package:kerlos_sherif/features/home/presentation/views/widgets/home_mobile_view.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({super.key});
