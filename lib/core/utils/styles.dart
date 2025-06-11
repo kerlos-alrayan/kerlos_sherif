@@ -42,6 +42,10 @@ abstract class Styles {
     fontSize: 24,
     fontWeight: FontWeight.normal, // Regular
     fontFamily: kPoppins,
+  );static const textStyle22 = TextStyle(
+    fontSize: 22,
+    fontWeight: FontWeight.normal, // Regular
+    fontFamily: kPoppins,
   );
 
   static const textStyle18 = TextStyle(

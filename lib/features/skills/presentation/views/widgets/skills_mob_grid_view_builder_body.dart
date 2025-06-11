@@ -3,12 +3,12 @@ import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:kerlos_sherif/core/utils/styles.dart';
 
-class SkillsGridViewBuilderBody<T> extends StatelessWidget {
+class SkillsMobGridViewBuilderBody<T> extends StatelessWidget {
   final T data;
   final String Function(T) getTitle;
   final String Function(T) getImage;
 
-  const SkillsGridViewBuilderBody({
+  const SkillsMobGridViewBuilderBody({
     super.key,
     required this.data,
     required this.getTitle,
@@ -18,13 +18,13 @@ class SkillsGridViewBuilderBody<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 250,
-      height: 100,
+      width: 150,
+      height: 170,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),
+        color: Colors.white
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
@@ -39,11 +39,10 @@ class SkillsGridViewBuilderBody<T> extends StatelessWidget {
             ),
           ),
           Flexible(
-            flex: 2,
             child: Text(
               getTitle(data),
               overflow: TextOverflow.ellipsis,
-              style: Styles.textStyle30,
+              style: Styles.textStyle24,
             ),
           ),
         ],

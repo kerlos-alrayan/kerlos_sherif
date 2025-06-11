@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:kerlos_sherif/core/widgets/loading_grid_view_builder_body.dart';
 
 import '../../../../../core/widgets/custom_gridview_builder.dart';
 
@@ -35,7 +36,19 @@ class CustomFirestoreGridViewBuilder<T> extends StatelessWidget {
             return Center(child: Text('There is an error: ${snapshot.error}'));
           }
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return GridView.builder(
+              padding: const EdgeInsets.all(12),
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: 10,
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: crossAxisCount,
+                mainAxisSpacing: mainAxisSpacing,
+                crossAxisSpacing: crossAxisSpacing,
+                childAspectRatio: childAspectRatio,
+              ),
+              itemBuilder: (context, index) => const LoadingGridViewBuilderBody(),
+            );
           }
 
           final items =

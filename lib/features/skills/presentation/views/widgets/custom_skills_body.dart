@@ -33,9 +33,9 @@ class CustomSkillsBody extends StatelessWidget {
             getImage: (skill) => skill.icon,
           ),
           crossAxisCount: 5,
-          mainAxisSpacing: 12,
-          crossAxisSpacing: 12,
-          childAspectRatio: 2.5,
+          mainAxisSpacing: 0,
+          crossAxisSpacing: 0,
+          childAspectRatio: 2.2,
         )
       ],
     );

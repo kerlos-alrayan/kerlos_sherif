@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
-import '../../../../../constants.dart';
 import 'package:kerlos_sherif/core/utils/styles.dart';
 
-class ProjectsGridViewBuilderBody<T> extends StatelessWidget {
+class CustomCarouselSliderBody<T> extends StatelessWidget {
   final T data;
   final String Function(T) getTitle;
   final String Function(T) getDescription;
   final String Function(T) getImage;
 
-  const ProjectsGridViewBuilderBody({
+  const CustomCarouselSliderBody({
     super.key,
     required this.data,
     required this.getTitle,
@@ -31,7 +30,6 @@ class ProjectsGridViewBuilderBody<T> extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          spacing: 8,
           children: [
             Flexible(
               child: ClipRRect(
@@ -55,20 +53,20 @@ class ProjectsGridViewBuilderBody<T> extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Text(
                 getTitle(data),
                 overflow: TextOverflow.ellipsis,
-                style: Styles.textStyle35,
+                style: Styles.textStyle30,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Text(
                 getDescription(data),
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
-                style: Styles.textStyle22.copyWith(color: const Color(0xff767474)),
+                style: Styles.textStyle18.copyWith(color: const Color(0xff767474)),
               ),
             ),
           ],
