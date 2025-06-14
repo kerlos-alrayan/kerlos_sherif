@@ -7,6 +7,8 @@ class CustomCarouselSlider<T> extends StatelessWidget {
   final double height;
   final double viewportFraction;
   final Duration autoPlayInterval;
+  final bool autoPlay;
+  final bool? enlargeCenterPage;
 
   const CustomCarouselSlider({
     super.key,
@@ -14,7 +16,7 @@ class CustomCarouselSlider<T> extends StatelessWidget {
     required this.itemBuilder,
     required this.height,
     this.viewportFraction = 0.7,
-    this.autoPlayInterval = const Duration(seconds: 5),
+    this.autoPlayInterval = const Duration(seconds: 5), required this.autoPlay, this.enlargeCenterPage,
   });
 
   @override
@@ -23,13 +25,14 @@ class CustomCarouselSlider<T> extends StatelessWidget {
       itemCount: data.length,
       options: CarouselOptions(
         height: height,
-        autoPlay: true,
+        autoPlay: autoPlay,
         autoPlayInterval: autoPlayInterval,
         enableInfiniteScroll: true,
         viewportFraction: viewportFraction,
         padEnds: false,
         scrollDirection: Axis.horizontal,
         reverse: false,
+        enlargeCenterPage: enlargeCenterPage,
       ),
       itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
         return Padding(

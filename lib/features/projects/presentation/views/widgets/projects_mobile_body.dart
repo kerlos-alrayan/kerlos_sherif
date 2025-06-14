@@ -32,7 +32,7 @@ class ProjectsMobileBody extends StatelessWidget {
               getTitle: (project) => project.title,
               getImage: (project) => project.cover,
               getDescription: (project) => project.description,
-            ), carouselSliderHeight: 370,
+            ), carouselSliderHeight: 370, autoPlay: true,
           ),
           SizedBox(
             height: 24,

@@ -19,7 +19,6 @@ class LoadingGridViewBuilderBody<T> extends StatelessWidget {
         baseColor: ShimmerColors.baseShimmerColor,
         highlightColor: ShimmerColors.highlightShimmerColor,
         child: Container(
-          width: 100,
           height: 225,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(32),

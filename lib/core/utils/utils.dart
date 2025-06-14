@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kerlos_sherif/features/certificates/presentation/views/certificates_view.dart';
 import 'package:kerlos_sherif/features/skills/presentation/views/skills_view.dart';
 
 import '../../features/home/presentation/views/home_view.dart';
@@ -11,5 +12,7 @@ class BodyUtils {
     SkillsView(),
 
     ProjectsView(),
+
+    CertificatesView(),
   ];
 }

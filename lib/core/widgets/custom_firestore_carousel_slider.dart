@@ -9,12 +9,17 @@ class CustomFirestoreCarouselSlider<T> extends StatelessWidget {
   final T Function(DocumentSnapshot doc) fromFirestore;
   final Widget Function(T data) itemBuilder;
   final double carouselSliderHeight;
+  final bool autoPlay;
+  final bool? enlargeCenterPage;
 
   const CustomFirestoreCarouselSlider({
     super.key,
     required this.collectionName,
     required this.fromFirestore,
-    required this.itemBuilder, required this.carouselSliderHeight,
+    required this.itemBuilder,
+    required this.carouselSliderHeight,
+    required this.autoPlay,
+    this.enlargeCenterPage,
   });
 
   @override
@@ -54,7 +59,10 @@ class CustomFirestoreCarouselSlider<T> extends StatelessWidget {
 
           return CustomCarouselSlider<T>(
             data: items,
-            itemBuilder: itemBuilder, height: carouselSliderHeight,
+            itemBuilder: itemBuilder,
+            height: carouselSliderHeight,
+            autoPlay: autoPlay,
+            enlargeCenterPage: enlargeCenterPage,
           );
         },
       ),
