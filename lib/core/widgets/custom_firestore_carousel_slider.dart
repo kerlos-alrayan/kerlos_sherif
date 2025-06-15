@@ -9,6 +9,7 @@ class CustomFirestoreCarouselSlider<T> extends StatelessWidget {
   final T Function(DocumentSnapshot doc) fromFirestore;
   final Widget Function(T data) itemBuilder;
   final double carouselSliderHeight;
+  final double viewportFraction;
   final bool autoPlay;
   final bool? enlargeCenterPage;
 
@@ -20,6 +21,7 @@ class CustomFirestoreCarouselSlider<T> extends StatelessWidget {
     required this.carouselSliderHeight,
     required this.autoPlay,
     this.enlargeCenterPage,
+    required this.viewportFraction,
   });
 
   @override
@@ -63,6 +65,7 @@ class CustomFirestoreCarouselSlider<T> extends StatelessWidget {
             height: carouselSliderHeight,
             autoPlay: autoPlay,
             enlargeCenterPage: enlargeCenterPage,
+            viewportFraction: viewportFraction,
           );
         },
       ),

@@ -15,8 +15,10 @@ class CustomCarouselSlider<T> extends StatelessWidget {
     required this.data,
     required this.itemBuilder,
     required this.height,
-    this.viewportFraction = 0.7,
-    this.autoPlayInterval = const Duration(seconds: 5), required this.autoPlay, this.enlargeCenterPage,
+    required this.viewportFraction,
+    this.autoPlayInterval = const Duration(seconds: 5),
+    required this.autoPlay,
+    this.enlargeCenterPage,
   });
 
   @override
@@ -36,7 +38,7 @@ class CustomCarouselSlider<T> extends StatelessWidget {
       ),
       itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          padding: const EdgeInsets.only(left: 16),
           child: itemBuilder(data[itemIndex]),
         );
       },

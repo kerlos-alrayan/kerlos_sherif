@@ -15,7 +15,7 @@ class ProjectsMobileBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
               'Skills',
               style: Styles.textStyle24.copyWith(fontWeight: FontWeight.bold),
@@ -32,7 +32,11 @@ class ProjectsMobileBody extends StatelessWidget {
               getTitle: (project) => project.title,
               getImage: (project) => project.cover,
               getDescription: (project) => project.description,
-            ), carouselSliderHeight: 370, autoPlay: true,
+            ),
+            carouselSliderHeight: 330,
+            autoPlay: true,
+            viewportFraction: 0.7,
+            enlargeCenterPage: true,
           ),
           SizedBox(
             height: 24,

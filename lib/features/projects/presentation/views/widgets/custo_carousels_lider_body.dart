@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:kerlos_sherif/core/utils/styles.dart';
+import 'package:shimmer/shimmer.dart';
+
+import '../../../../../core/utils/shimmer.dart';
+import '../../../../../core/widgets/custom_loading_container.dart';
 
 class CustomCarouselSliderBody<T> extends StatelessWidget {
   final T data;
@@ -42,11 +46,15 @@ class CustomCarouselSliderBody<T> extends StatelessWidget {
                 fit: BoxFit.cover,
                 imageUrl: getImage(data),
                 width: double.infinity,
-                height: 250,
-                placeholder: (context, url) =>
-                const Center(child: CircularProgressIndicator(strokeWidth: 2)),
+                height: 180,
+                placeholder: (context, url) => Shimmer.fromColors(
+                  baseColor: ShimmerColors.baseShimmerColor,
+                  highlightColor: ShimmerColors.highlightShimmerColor,
+                  child: CustomLoadingContainer(
+                      width: double.infinity, height: 180, borderRadius: 16),
+                ),
                 errorWidget: (context, url, error) =>
-                const Icon(Icons.error, color: Colors.red),
+                    const Icon(Icons.error, color: Colors.red),
               ),
             ),
           ),
@@ -65,7 +73,8 @@ class CustomCarouselSliderBody<T> extends StatelessWidget {
               getDescription(data),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: Styles.textStyle18.copyWith(color: const Color(0xff767474)),
+              style:
+                  Styles.textStyle18.copyWith(color: const Color(0xff767474)),
             ),
           ),
         ],

@@ -11,7 +11,7 @@ class CertificatesViewDeskBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.start ,
+      mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
@@ -27,9 +27,12 @@ class CertificatesViewDeskBody extends StatelessWidget {
           itemBuilder: (certificates) => CarouselSliderBody(
             data: certificates,
             getImage: (certificates) => certificates.image,
+            imageWidth: 700,
+            imageHeight: 500,
           ),
-          carouselSliderHeight: 550, autoPlay: false,
-          enlargeCenterPage: true,
+          carouselSliderHeight: 550,
+          autoPlay: true,
+          enlargeCenterPage: true, viewportFraction: 0.7,
         ),
       ],
     );
