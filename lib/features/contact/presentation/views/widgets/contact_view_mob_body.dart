@@ -30,9 +30,7 @@ class ContactViewMobBody extends StatelessWidget {
                 customClickBottomtextStyle: Styles.textStyle18,
               ),
             ),
-            SizedBox(
-              height: 16,
-            ),
+
             // Contact Me
             Expanded(
               child: Padding(
