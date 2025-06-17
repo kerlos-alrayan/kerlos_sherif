@@ -17,7 +17,7 @@ class ProjectsMobileBody extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Text(
-              'Skills',
+              'Projects',
               style: Styles.textStyle24.copyWith(fontWeight: FontWeight.bold),
             ),
           ),

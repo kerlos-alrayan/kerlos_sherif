@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 import 'core/utils/app_router.dart';
 import 'firebase_options.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -32,14 +32,15 @@ class Portfolio extends StatelessWidget {
           ChangeNotifierProvider(create: (_) => ScrollProvider()),
         ],
         child: MaterialApp.router(
-            routerConfig: AppRouter.router,
-            debugShowCheckedModeBanner: false,
-            title: 'Kerlos Sherif',
-            theme: ThemeData.dark().copyWith(
-              scaffoldBackgroundColor: kPrimaryColor,
-              textTheme:
-                  GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
-            )),
+          routerConfig: AppRouter.router,
+          debugShowCheckedModeBanner: false,
+          title: 'Kerlos Sherif',
+          theme: ThemeData.dark().copyWith(
+            scaffoldBackgroundColor: kPrimaryColor,
+            textTheme:
+                GoogleFonts.montserratTextTheme(ThemeData.light().textTheme),
+          ),
+        ),
       ),
     );
   }

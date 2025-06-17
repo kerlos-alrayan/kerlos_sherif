@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kerlos_sherif/features/home/presentation/views/widgets/download_cv.dart';
+import 'package:kerlos_sherif/core/widgets/custom_click_bottom.dart';
 
 class NameAndCVSection extends StatelessWidget {
   const NameAndCVSection(
@@ -44,10 +44,10 @@ class NameAndCVSection extends StatelessWidget {
         SizedBox(
           height: sizedBoxHeight,
         ),
-        DownloadCV(
+        CustomClickBottom(
           width: downloadCVWidth,
           height: downloadCVHeight,
-          downloadCVStyle: downloadCVStyle,
+          textStyle: downloadCVStyle, text: 'Download CV',
         ),
       ],
     );

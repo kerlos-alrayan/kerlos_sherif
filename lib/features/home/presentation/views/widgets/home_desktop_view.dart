@@ -34,7 +34,7 @@ class HomeDesktopView extends StatelessWidget {
                     nameStyle: Styles.textStyle80,
                     shortAboutStyle:
                         Styles.textStyle30.copyWith(color: Color(0xff767474)),
-                    width: MediaQuery.of(context).size.width *0.4,
+                    width: MediaQuery.of(context).size.width * 0.4,
                     height: 90,
                     downloadCVWidth: 233,
                     downloadCVHeight: 65,

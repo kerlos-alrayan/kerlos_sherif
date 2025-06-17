@@ -80,6 +80,7 @@ flutter:
     - assets/images/home/my_image.jpg
     - assets/images/skills/
     - assets/images/home/my_logo.png
+    - assets/images/contact_me/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 
@@ -106,6 +107,9 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
+    - family: Epilogue
+      fonts:
+        - asset: assets/fonts/Epilogue-Regular.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 

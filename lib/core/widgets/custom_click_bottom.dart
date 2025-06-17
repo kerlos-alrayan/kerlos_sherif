@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
-
-class DownloadCV extends StatelessWidget {
-  const DownloadCV({
-    super.key, required this.width, required this.height, required this.downloadCVStyle,
+class CustomClickBottom extends StatelessWidget {
+  const CustomClickBottom({
+    super.key,
+    required this.width,
+    required this.height,
+    required this.textStyle,
+    required this.text,
   });
 
   final double width;
   final double height;
-  final TextStyle downloadCVStyle;
+  final String text;
+  final TextStyle textStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +25,9 @@ class DownloadCV extends StatelessWidget {
             color: Color(0xff4C77BD), borderRadius: BorderRadius.circular(16)),
         child: Center(
             child: Text(
-              'Download CV',
-              style: downloadCVStyle.copyWith(color: Colors.white),
-            )),
+          text,
+          style: textStyle.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+        )),
       ),
     );
   }
